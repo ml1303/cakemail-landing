@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CakeMail Marketing — Direct Mail for Nothing Bundt Cakes Franchise Owners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --frosting:#FFF9E3;
+  --warm-white:#FFFDF5;
+  --dark-blue:#1D4494;
+  --mid-blue:#3D7CC9;
+  --bundt-blue:#89ABE3;
+  --chocolate:#653A2B;
+  --chocolate-light:#8B5A4A;
+  --chocolate-pale:#F5EDE9;
+  --red-velvet:#B6452A;
+  --text-dark:#1a1a1a;
+  --text-mid:#4A3728;
+  --text-light:#7A6358;
+  --border:rgba(29,68,148,0.12);
+}
+body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--text-dark);line-height:1.6;overflow-x:hidden}
+
+nav{position:sticky;top:0;z-index:100;background:var(--dark-blue);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav-logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.2rem;font-weight:700}
+.nav-logo span{color:var(--bundt-blue)}
+nav a.nav-cta{background:var(--chocolate);color:#fff;text-decoration:none;font-size:0.83rem;font-weight:600;padding:10px 22px;border-radius:4px;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.2s;white-space:nowrap}
+nav a.nav-cta:hover{background:var(--chocolate-light)}
+
+.scarcity-bar{background:var(--red-velvet);padding:13px 5%;text-align:center}
+.scarcity-bar p{font-size:0.88rem;color:#fff;font-weight:500;letter-spacing:0.02em;line-height:1.6}
+.scarcity-bar strong{font-weight:700}
+
+.hero{background:var(--dark-blue);padding:84px 5% 76px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-80px;right:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(137,171,227,0.14) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:820px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(137,171,227,0.15);color:var(--bundt-blue);font-size:0.76rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:6px 18px;border-radius:100px;border:1px solid rgba(137,171,227,0.3);margin-bottom:32px}
+.hero-quote{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.3;margin-bottom:28px;font-style:italic}
+.hero-quote em{font-style:normal;color:var(--bundt-blue)}
+.hero-answer{font-size:1.1rem;color:rgba(255,255,255,0.72);max-width:620px;margin:0 auto 12px;font-weight:300;line-height:1.8}
+.hero-detail{font-size:0.95rem;color:rgba(255,255,255,0.46);max-width:560px;margin:0 auto 38px;font-style:italic}
+.hero-cta-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.btn-primary{background:var(--chocolate);color:#fff;text-decoration:none;font-size:1rem;font-weight:600;padding:17px 38px;border-radius:4px;transition:background 0.2s;border:none;cursor:pointer;display:inline-block;letter-spacing:0.02em}
+.btn-primary:hover{background:var(--chocolate-light)}
+.btn-ghost{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.95rem;font-weight:500;padding:17px 36px;border-radius:4px;border:1px solid rgba(255,255,255,0.22);transition:all 0.2s;display:inline-block}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.6);color:#fff}
+.hero-micro{font-size:0.8rem;color:rgba(255,255,255,0.36);letter-spacing:0.03em}
+
+.roi-strip{background:var(--dark-blue);border-top:1px solid rgba(255,255,255,0.07);padding:44px 5%}
+.roi-inner{max-width:960px;margin:0 auto}
+.roi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);border-radius:8px;overflow:hidden}
+@media(max-width:600px){.roi-grid{grid-template-columns:1fr}}
+.roi-cell{background:#1e3d7a;padding:28px 22px;text-align:center}
+.roi-num{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:900;color:var(--bundt-blue);display:block;line-height:1;margin-bottom:8px}
+.roi-lbl strong{color:rgba(255,255,255,0.88);display:block;font-size:0.88rem;margin-bottom:3px}
+.roi-lbl{font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.55}
+.roi-note{text-align:center;margin-top:18px;font-size:0.78rem;color:rgba(255,255,255,0.3);font-style:italic}
+
+.section-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:var(--chocolate);margin-bottom:12px;display:block}
+h2.section-h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;color:var(--dark-blue);line-height:1.25;margin-bottom:22px}
+
+/* OBJECTION BLOCK */
+.objection-bg{background:var(--dark-blue);padding:60px 5%;border-top:1px solid rgba(255,255,255,0.06)}
+.objection-inner{max-width:780px;margin:0 auto;text-align:center}
+.objection-inner h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);color:#fff;font-weight:700;margin-bottom:16px;line-height:1.3}
+.objection-inner p{font-size:0.97rem;color:rgba(255,255,255,0.62);line-height:1.85;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto}
+.objection-inner p strong{color:#fff}
+
+.pain-bg{background:#fff;padding:72px 5%;border-bottom:1px solid var(--border)}
+.pain-inner{max-width:780px;margin:0 auto}
+.pain-inner p{font-size:1rem;color:var(--text-mid);line-height:1.85;margin-bottom:16px}
+.pain-inner p strong{color:var(--dark-blue)}
+
+.mech-bg{background:var(--frosting);padding:72px 5%;border-bottom:1px solid var(--border)}
+.mech-inner{max-width:1060px;margin:0 auto}
+.mech-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+@media(max-width:720px){.mech-grid{grid-template-columns:1fr;gap:36px}}
+.mech-text p{font-size:0.97rem;color:var(--text-mid);line-height:1.82;margin-bottom:14px}
+.mech-box{background:#fff;border-radius:8px;padding:34px 30px;border-left:4px solid var(--chocolate)}
+.mech-box-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--dark-blue);margin-bottom:8px}
+.mech-box-sub{font-size:0.88rem;color:var(--text-mid);margin-bottom:22px;line-height:1.65}
+.check-list{list-style:none}
+.check-list li{font-size:0.9rem;color:var(--text-mid);padding:9px 0;border-top:1px solid rgba(29,68,148,0.08);display:flex;align-items:flex-start;gap:10px}
+.check-list li::before{content:'✓';color:var(--chocolate);font-weight:700;flex-shrink:0;margin-top:2px}
+
+.how-bg{background:var(--dark-blue);padding:80px 5%}
+.how-inner{max-width:1060px;margin:0 auto}
+.how-bg .section-label{color:var(--bundt-blue)}
+.how-bg h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.5rem);color:#fff;font-weight:700;margin-bottom:12px}
+.how-bg .section-sub{font-size:1rem;color:rgba(255,255,255,0.58);max-width:560px;line-height:1.78;margin-bottom:48px}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.step-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:8px;padding:28px 22px}
+.step-num{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:900;color:var(--bundt-blue);line-height:1;margin-bottom:14px}
+.step-card h3{font-size:0.97rem;font-weight:600;color:#fff;margin-bottom:8px}
+.step-card p{font-size:0.86rem;color:rgba(255,255,255,0.65);line-height:1.72}
+
+/* PROOF */
+.proof-bg{background:#fff;padding:72px 5%;border-bottom:1px solid var(--border)}
+.proof-inner{max-width:860px;margin:0 auto}
+.proof-intro{font-size:1rem;color:var(--text-mid);line-height:1.8;margin-bottom:0}
+.proof-card{background:var(--dark-blue);border-radius:8px;padding:40px;margin-top:28px;border:2px solid var(--bundt-blue)}
+.proof-quote{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,2.2vw,1.35rem);color:#fff;font-style:italic;line-height:1.75;margin-bottom:28px}
+.proof-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(137,171,227,0.2);border-radius:6px;overflow:hidden;margin-bottom:22px}
+@media(max-width:580px){.proof-numbers{grid-template-columns:1fr}}
+.proof-num-cell{background:#1a3872;padding:22px 16px;text-align:center}
+.proof-num-cell .pn{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1;margin-bottom:6px}
+.proof-num-cell .pl{font-size:0.8rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.08em;line-height:1.4}
+.proof-attribution{font-size:0.84rem;color:rgba(255,255,255,0.65);font-style:italic}
+.proof-disclaimer{font-size:0.76rem;color:var(--text-light);margin-top:16px;font-style:italic;line-height:1.65}
+
+/* SECOND PROOF CONTEXT */
+.proof-context{background:var(--frosting);border:1px solid var(--border);border-radius:8px;padding:28px 32px;margin-top:24px}
+.proof-context p{font-size:0.92rem;color:var(--text-mid);line-height:1.8;margin-bottom:10px}
+.proof-context p:last-child{margin-bottom:0}
+.proof-context strong{color:var(--dark-blue)}
+
+/* MARDI */
+.mardi-bg{background:var(--frosting);padding:72px 5%;border-bottom:1px solid var(--border)}
+.mardi-inner{max-width:780px;margin:0 auto}
+.mardi-inner p{font-size:1rem;color:var(--text-mid);line-height:1.85;margin-bottom:16px}
+.mardi-inner p strong{color:var(--dark-blue)}
+.scarcity-explain{background:#fff;border-left:4px solid var(--red-velvet);border-radius:4px;padding:18px 22px;margin-top:8px}
+.scarcity-explain p{font-size:0.92rem;color:var(--text-mid);line-height:1.75;margin-bottom:0}
+.scarcity-explain strong{color:var(--dark-blue)}
+
+/* PRICING */
+.pricing-bg{background:var(--dark-blue);padding:80px 5%}
+.pricing-inner{max-width:780px;margin:0 auto;text-align:center}
+.pricing-bg .section-label{color:var(--bundt-blue)}
+.pricing-bg h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.5rem);color:#fff;font-weight:700;margin-bottom:12px}
+.pricing-bg .section-sub{font-size:1rem;color:rgba(255,255,255,0.58);max-width:580px;margin:0 auto 40px;line-height:1.78}
+.price-card-single{background:rgba(255,255,255,0.07);border:2px solid var(--bundt-blue);border-radius:10px;max-width:680px;margin:0 auto;text-align:left;overflow:hidden}
+.price-top{padding:36px 40px 28px;border-bottom:1px solid rgba(137,171,227,0.2);text-align:center}
+@media(max-width:640px){.price-top{padding:28px 24px 22px}}
+.price-program-name{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:var(--bundt-blue);margin-bottom:10px}
+.price-main-amt{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;color:#fff;line-height:1}
+.price-main-freq{font-size:1rem;color:rgba(255,255,255,0.5);margin-top:4px;margin-bottom:6px}
+.price-total-yr{font-size:0.88rem;color:rgba(255,255,255,0.45);margin-bottom:16px}
+.price-setup-line{display:inline-block;background:rgba(137,171,227,0.12);border:1px solid rgba(137,171,227,0.2);border-radius:4px;padding:8px 18px;font-size:0.84rem;color:rgba(255,255,255,0.65);line-height:1.6}
+.price-setup-line strong{color:rgba(255,255,255,0.9);display:block;font-size:0.9rem}
+.price-roi-box{margin:0;padding:22px 40px;background:rgba(137,171,227,0.1);border-bottom:1px solid rgba(137,171,227,0.15)}
+@media(max-width:640px){.price-roi-box{padding:18px 24px}}
+.price-roi-box p{font-size:0.9rem;color:#c8daf5;line-height:1.7}
+.price-roi-box strong{color:#fff;font-weight:600}
+.price-features-wrap{padding:28px 40px 36px}
+@media(max-width:640px){.price-features-wrap{padding:22px 24px 28px}}
+.price-features{list-style:none;margin-bottom:30px}
+.price-features li{font-size:0.92rem;color:rgba(255,255,255,0.75);padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:flex-start;gap:10px;line-height:1.55}
+.price-features li::before{content:'✓';color:var(--bundt-blue);font-weight:700;flex-shrink:0;margin-top:2px}
+.price-card-cta{display:block;text-align:center;background:var(--chocolate);color:#fff;text-decoration:none;font-size:0.97rem;font-weight:700;padding:18px;border-radius:4px;letter-spacing:0.03em;text-transform:uppercase;transition:background 0.2s;line-height:1.4}
+.price-card-cta:hover{background:var(--chocolate-light)}
+.price-terms{text-align:center;margin-top:18px;font-size:0.78rem;color:rgba(255,255,255,0.32);line-height:1.8}
+
+.cta-footer{background:var(--chocolate-pale);padding:80px 5%;text-align:center;border-top:1px solid var(--border)}
+.cta-footer h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--dark-blue);font-weight:700;margin-bottom:14px}
+.cta-footer p{font-size:1rem;color:var(--text-mid);max-width:500px;margin:0 auto 32px;line-height:1.8}
+.contact-row{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:28px}
+.contact-item{font-size:0.88rem;color:var(--text-mid)}
+.contact-item a{color:var(--dark-blue);text-decoration:none;font-weight:600}
+.contact-item a:hover{text-decoration:underline}
+
+footer{background:var(--dark-blue);padding:22px 5%;text-align:center;font-size:0.76rem;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06);line-height:1.8}
+.full-w{width:100%}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Cake<span>Mail</span> Marketing</div>
+  <a href="#how-it-works" class="nav-cta">How It Works</a>
+</nav>
+
+<!-- SCARCITY BAR: reason for limit now visible, connects to Mardi section -->
+<div class="scarcity-bar full-w">
+  <p><strong>Only 2 new clients accepted per month.</strong> Each territory requires days of hands-on research.<br>Email now to reserve your start date.</p>
+</div>
+
+<div class="hero full-w">
+  <div class="hero-inner">
+    <div class="hero-badge">Exclusively for Nothing Bundt Cakes Franchise Owners</div>
+    <p class="hero-quote">
+      "Right now, businesses inside your territory are placing large, repeat cake orders.<br>
+      They are spending that money somewhere.<br>
+      <em>The question is whether your bakery is the one they think of first.</em>"
+    </p>
+    <p class="hero-answer">CakeMail puts your bakery in front of the local HR managers, office admins, and event planners who spend $400 to $4,000 per order, so when they're ready to buy, your name is already on their desk.</p>
+    <p class="hero-detail" style="text-align:center;line-height:2.2">No coupons.&nbsp;&nbsp;No discounts.&nbsp;&nbsp;No promotions.<br><span style="font-size:0.88rem;opacity:0.7">No work for your team.</span></p>
+    <div class="hero-cta-group">
+      <a href="#how-it-works" class="btn-primary">See How It Works</a>
+      
+    </div>
+    <p class="hero-micro">One client generated $12,000+ in new large-order revenue against an $8,664 investment.</p>
+  </div>
+</div>
+
+<div class="roi-strip full-w">
+  <div class="roi-inner">
+    <div class="roi-grid">
+      <div class="roi-cell">
+        <span class="roi-num">$12,000+</span>
+        <div class="roi-lbl"><strong>Proven Year 1 Result</strong>New large-order revenue from one Charlotte Nothing Bundt Cakes bakery</div>
+      </div>
+      <div class="roi-cell">
+        <span class="roi-num">Up to 250</span>
+        <div class="roi-lbl"><strong>Postcards Every Month</strong>To your private list of qualified local business buyers</div>
+      </div>
+      <div class="roi-cell">
+        <span class="roi-num">12</span>
+        <div class="roi-lbl"><strong>Campaigns Per Year</strong>Timed to the occasions companies already order for</div>
+      </div>
+    </div>
+    <p class="roi-note">Result is from one client's experience and is not a guarantee of equivalent performance.</p>
+  </div>
+</div>
+
+<!-- OBJECTION BLOCK -->
+<div class="objection-bg full-w">
+  <div class="objection-inner">
+    <h2>CakeMail Was Built for the Buyers Who Never Walk Into Your Bakery.</h2>
+    
+    <p>The HR manager ordering 60 cakes for employee appreciation is not browsing Instagram or walking past your window. <strong>She is a completely different buyer.</strong> She doesn't respond to retail promotions. She is not looking for a deal. She is looking for a bakery she already knows, recognizes, and trusts.</p>
+    <p>CakeMail is built specifically to reach her, keep your bakery in front of her month after month, and make sure that when she is ready to place a $1,500 order, your name is the one she reaches for.</p>
+  </div>
+</div>
+
+<div class="pain-bg full-w">
+  <div class="pain-inner">
+    <span class="section-label">The Problem</span>
+    <h2 class="section-h2">Your Bakery Is Invisible to the Buyers Placing the Largest Orders in Your Market</h2>
+    <p>There is an HR manager two miles from your bakery right now. She orders cakes for her company's employees: birthdays, retirements, team wins, holidays. She orders four to six times a year in quantities your retail counter rarely sees. She spends $400 to $4,000 every time she places an order.</p>
+    <p>She doesn't know your bakery exists.</p>
+    <p>That's not a foot-traffic problem. It's not a product problem. <strong>It's a visibility problem.</strong> And it has a very specific solution.</p>
+    <p>Corporate buyers don't browse Instagram. They don't use coupons. They order from the bakery that feels familiar, professional, and easy to trust: the one they've been hearing from consistently. A postcard on their desk. Your bakery's name. Month after month.</p>
+    <p>When the order is ready to be placed, they don't search. They call the bakery they've been hearing from all year.</p>
+  </div>
+</div>
+
+<div class="mech-bg full-w">
+  <div class="mech-inner">
+    <div class="mech-grid">
+      <div class="mech-text">
+        <span class="section-label">Why It Works</span>
+        <h2 class="section-h2">A Private Buyer List. Your Market. Yours Alone.</h2>
+        <p>Most marketing scatters. It reaches everyone and no one. CakeMail works differently because it starts with a private, researched list of the specific buyers in your territory who have the budget, the need, and the habit of ordering in volume.</p>
+        <p>Medical offices. Property management companies. Corporate HR teams. Law firms. The companies near you that celebrate regularly, gift often, and order for groups, not just walk-in customers buying one cake.</p>
+        <p>That list is built for your bakery and your bakery alone. And every month, your postcard lands in those buyers' hands: not their inbox, not their social feed, their physical desk, while every competitor is fighting for screen time.</p>
+        <p>Research shows buyers need to hear from you 6 to 8 times before they act. The 12-month program is built around exactly that reality. By month three, you're familiar. By month six, you're trusted. By month twelve, you're the only bakery they think of.</p>
+      </div>
+      <div class="mech-box">
+        <p class="mech-box-title">What Makes This Different</p>
+        <p class="mech-box-sub">This isn't bulk mail. Every element is built for corporate buyers, not retail shoppers. Two completely different audiences.</p>
+        <ul class="check-list">
+          <li>Private buyer list built for your bakery and your bakery alone</li>
+          <li>Targets buyers who spend $400 to $4,000 per order</li>
+          <li>Corporate-focused copy and photography, not retail promotions</li>
+          <li>Up to 250 first-class 6x9 full-color postcards, monthly</li>
+          <li>12 campaigns timed to the occasions companies buy for</li>
+          <li>No coupons, no discounts, no promotions</li>
+          <li>Zero work for you or your team</li>
+          <li>Complete done-for-you execution, every month</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="how-bg full-w" id="how-it-works">
+  <div class="how-inner">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-h2" style="color:#fff">You Bake. We Bring the Buyers.</h2>
+    <p class="section-sub">Four steps. All handled. Your team never touches it.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Territory Buyer List Build</h3>
+        <p>Mardi personally researches your local market over several days to identify and qualify the businesses most likely to place large, repeat orders from your bakery.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Your Program Is Set Up</h3>
+        <p>Your private buyer list is built, your postcards are written and designed using bakery-approved images and brand assets. No work required from you or your team.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Monthly Mailings Go Out</h3>
+        <p>Every month, a professionally designed postcard goes out first-class to your buyer list. Copy, design, printing, and postage are all handled for you.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>Your Bakery Becomes Their Default</h3>
+        <p>Buyers need to hear from you 6 to 8 times before they act. After 12 months of consistent mailings, your bakery is the name they reach for when a large order is ready to be placed.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="proof-bg full-w">
+  <div class="proof-inner">
+    <span class="section-label">Real Results</span>
+    <h2 class="section-h2">This System Is Already Running in Charlotte</h2>
+    <p class="proof-intro">Jeff Grant owns Nothing Bundt Cakes bakeries in Charlotte, North Carolina. Before CakeMail, the local business buyers ordering for teams, clients, and group celebrations weren't ordering consistently. The program changed that.</p>
+    <div class="proof-card">
+      <p class="proof-quote">"This system has been running for Jeff Grant's Nothing Bundt Cakes bakeries in Charlotte for over a year. It generated over $12,000 in new large-order revenue from local businesses that were not ordering consistently before the program began. Not one person inside his bakery had to manage the strategy, buyer list, copy, design, printing, or mailing."</p>
+      <div class="proof-numbers">
+        <div class="proof-num-cell">
+          <span class="pn">$12,000+</span>
+          <span class="pl">New Revenue, Year 1</span>
+        </div>
+        <div class="proof-num-cell">
+          <span class="pn">$8,664</span>
+          <span class="pl">Year 1 Investment</span>
+        </div>
+        <div class="proof-num-cell">
+          <span class="pn">12 Months</span>
+          <span class="pl">Consistent Monthly Mailings to the Same Buyer List</span>
+          <span class="pl">Client ROI, Year 1</span>
+        </div>
+      </div>
+      <p class="proof-attribution">Jeff Grant, Nothing Bundt Cakes, Charlotte, NC. Program active 12 months.</p>
+    </div>
+
+    <!-- SECOND PROOF CONTEXT: addresses single data point weakness -->
+    <div class="proof-context">
+      <p><strong>Why Charlotte is not an exception.</strong> The corporate gifting and employee recognition market exists in every Nothing Bundt Cakes territory. HR managers, office admins, property management companies, medical practices, and law firms order cakes for groups in every city. Charlotte proved the system works. The same buyer profile exists in your market right now.</p>
+      <p>The only question is whether your bakery is the one showing up on their desk every month or whether a competitor gets there first.</p>
+    </div>
+
+    <p class="proof-disclaimer">This result represents one client's experience. CakeMail Marketing does not guarantee specific revenue outcomes. Results depend on territory, market conditions, and product quality.</p>
+  </div>
+</div>
+
+<div class="mardi-bg full-w">
+  <div class="mardi-inner">
+    <span class="section-label">Why Trust This</span>
+    <h2 class="section-h2">16 Years. 13,000 Pieces of Mail Per Month. One System That Works.</h2>
+    <p>I am Mardi Lo Faso, founder of CakeMail Marketing. For 16 years I ran a direct mail referral program for leading real estate companies across the United States, managing over 13,000 pieces of mail per month from curated local lists.</p>
+    <p></p>
+    <p><strong>The system is identical. The list changes. The discipline does not.</strong> CakeMail applies that same monthly visibility discipline to your bakery, targeting the corporate buyers in your territory who order in volume and order repeatedly.</p>
+    <p></p>
+    <div class="scarcity-explain">
+      <p><strong>Why only 2 new clients per month:</strong> Every territory buyer list is built from scratch through hands-on research specific to your market. That work takes time to do correctly. Taking on more than two new territories per month means the research gets rushed and the list gets weaker. I won't let that happen.</p>
+    </div>
+    <p style="margin-top:20px">The corporate buyers in your market are ordering from someone. Make sure it's you.</p>
+  </div>
+</div>
+
+<div class="pricing-bg full-w" id="pricing">
+  <div class="pricing-inner">
+    <span class="section-label">Investment</span>
+    <h2 class="section-h2" style="color:#fff">One Complete Program. Everything Done for You.</h2>
+    <p class="section-sub">One monthly investment covers your buyer list, postcard design, printing, postage, and complete program management. Nothing else to buy.</p>
+
+    <div class="price-card-single">
+      <div class="price-top">
+        <p class="price-program-name">The CakeMail 12-Month Program</p>
+        <p class="price-main-amt">$597</p>
+        <p class="price-main-freq">per month</p>
+        <p class="price-total-yr">$7,164 for 12 months of mailings</p>
+        <div class="price-setup-line">
+          <strong>Plus a one-time Territory Buyer List Build and Program Setup</strong>
+          $1,500 due before work begins. Total Year 1 investment: $8,664
+        </div>
+      </div>
+
+      <div class="price-roi-box">
+        <p><strong>The return:</strong> One Charlotte Nothing Bundt Cakes franchise owner generated $12,000+ in new large-order revenue against an $8,664 Year 1 investment. Results vary by territory and market conditions.</p>
+      </div>
+
+      <div class="price-features-wrap">
+        <ul class="price-features">
+          <li>Territory Buyer List Build: multi-day research to identify and qualify your highest-value local buyers</li>
+          <li>Private buyer list built for your bakery and your bakery alone</li>
+          <li>Up to 250 first-class 6x9 full-color postcards, mailed every month</li>
+          <li>12 campaigns per year timed to the occasions companies order for</li>
+          <li>Professional copy and design focused on corporate buyers who spend $400 to $4,000 per order</li>
+          <li>Postcards are built using your bakery's approved images and brand assets. Access is coordinated with you at enrollment</li>
+          <li>Complete program management: no work required from you or your team</li>
+        </ul>
+        <a href="mailto:Mardi@cakemailmarketing.com?subject=CakeMail%20Program%20Inquiry" class="price-card-cta">Start Now — Buyers Need to Hear From You 6 to 8 Times Before They Call</a>
+      </div>
+    </div>
+
+    <p class="price-terms">12-month agreement required. Setup fee is non-refundable.<br>Only 2 new clients accepted per month.</p>
+  </div>
+</div>
+
+<div class="cta-footer full-w" id="contact">
+  <h2>Your Territory Is Ready. Let's Get Started.</h2>
+  <p>Email directly to get started. I personally review every inquiry and respond within one business day.</p>
+  <a href="mailto:Mardi@cakemailmarketing.com?subject=CakeMail%20Program%20Inquiry" class="btn-primary" style="font-size:1rem;padding:18px 44px">Email Mardi to Get Started</a>
+  <div class="contact-row">
+    <div class="contact-item">Email: <a href="mailto:Mardi@cakemailmarketing.com">Mardi@cakemailmarketing.com</a></div>
+    <div class="contact-item">Web: <a href="https://www.cakemailmarketing.com" target="_blank">cakemailmarketing.com</a></div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 CakeMail Marketing &nbsp;|&nbsp; Exclusively serving Nothing Bundt Cakes franchise owners &nbsp;|&nbsp; Charlotte, NC<br>
+  Results cited represent one client's experience and are not a guarantee of equivalent performance.
+</footer>
+
+</body>
+</html>
